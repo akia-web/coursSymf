@@ -23,14 +23,24 @@ class CalculController extends AbstractController
      */
     public function addition($number1, $number2): Response
     {
-        return $this->render('calcul/index.html.twig', [
-            'controller_name' => 'CalculController',
-            'number1' => $number1,
-            'number2' => $number2,
-            'signe' => '+',
-            'resultat' => $number1 + $number2
+        if(is_numeric($number1) && is_numeric($number2)){
+            return $this->render('calcul/index.html.twig', [
+                'controller_name' => 'CalculController',
+                'number1' => $number1,
+                'number2' => $number2,
+                'signe' => '+',
+                'resultat' => $number1 + $number2
+    
+            ]);
+        }else{
+            return $this->render('calcul/erreur.html.twig', [
+                'controller_name' => 'CalculController',
+                
+    
+            ]);
+        }
 
-        ]);
+       
     }
 
      /**
@@ -38,14 +48,22 @@ class CalculController extends AbstractController
      */
     public function soustraction($number1, $number2): Response
     {
-        return $this->render('calcul/index.html.twig', [
-            'controller_name' => 'CalculController',
-            'number1' => $number1,
-            'number2' => $number2,
-            'signe' => '-',
-            'resultat' => $number1 - $number2
-
-        ]);
+        if(is_numeric($number1) && is_numeric($number2)){
+            return $this->render('calcul/index.html.twig', [
+                'controller_name' => 'CalculController',
+                'number1' => $number1,
+                'number2' => $number2,
+                'signe' => '-',
+                'resultat' => $number1 - $number2
+    
+            ]);
+        }else{
+            return $this->render('calcul/erreur.html.twig', [
+                'controller_name' => 'CalculController',
+                
+    
+            ]);
+        }
     }
 
      /**
@@ -53,14 +71,22 @@ class CalculController extends AbstractController
      */
     public function multiplication($number1, $number2): Response
     {
-        return $this->render('calcul/index.html.twig', [
-            'controller_name' => 'CalculController',
-            'number1' => $number1,
-            'number2' => $number2,
-            'signe' => '*',
-            'resultat' => $number1 * $number2
-
-        ]);
+        if(is_numeric($number1) && is_numeric($number2)){
+            return $this->render('calcul/index.html.twig', [
+                'controller_name' => 'CalculController',
+                'number1' => $number1,
+                'number2' => $number2,
+                'signe' => '*',
+                'resultat' => $number1 * $number2
+    
+            ]);
+        }else{
+            return $this->render('calcul/erreur.html.twig', [
+                'controller_name' => 'CalculController',
+                
+    
+            ]);
+        }
     }
 
          /**
@@ -68,13 +94,21 @@ class CalculController extends AbstractController
      */
     public function division($number1, $number2): Response
     {
-        return $this->render('calcul/index.html.twig', [
-            'controller_name' => 'CalculController',
-            'number1' => $number1,
-            'number2' => $number2,
-            'signe' => '/',
-            'resultat' => $number1 / $number2
-
-        ]);
+        if(is_numeric($number1) && is_numeric($number2)){
+            return $this->render('calcul/index.html.twig', [
+                'controller_name' => 'CalculController',
+                'number1' => $number1,
+                'number2' => $number2,
+                'signe' => '/',
+                'resultat' => $number1 / $number2
+    
+            ]);
+        }else{
+            return $this->render('calcul/erreur.html.twig', [
+                'controller_name' => 'CalculController',
+                
+    
+            ]);
+        }
     }
 }
