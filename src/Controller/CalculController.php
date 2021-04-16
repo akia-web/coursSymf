@@ -19,7 +19,7 @@ class CalculController extends AbstractController
     }
 
       /**
-     * @Route("/calcul/addition/{number1}/{number2}", name="machin/addition")
+     * @Route("/calcul/addition/{number1}/{number2}", name="calcul/addition")
      */
     public function addition($number1, $number2): Response
     {
